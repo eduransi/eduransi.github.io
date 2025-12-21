@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduRansi</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <div id="navbar"></div>
+    <!-- Navbar end -->
+    <!-- HERO READ START -->
+    <section class="reading-hero">
+      <div class="reading-content">
+        <div class="reading-icon">💬</div>
+        <h1>Forum Asuransi</h1>
+
+        <a href="#forum" class="reading-btn">Mulai Forum</a>
+
+        <p class="reading-desc">
+          Pojok Baca EduRansi menyajikan materi asuransi yang disusun secara
+          bertahap, mulai dari konsep dasar hingga pemahaman lanjutan, dengan
+          bahasa yang mudah dipahami oleh remaja.
+        </p>
+
+        <ul class="reading-info">
+          <li>
+            Referensi yang digunakan adalah
+            <a
+              href="https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/book/book4/reader.html"
+              style="color: white; text-decoration: underline"
+              target="_blank"
+              >Buku 4 Perasuransian Seri Literasi Keuangan</a
+            >
+            yang diterbitkan (revisi) oleh Otoritas Jasa Keuangan pada tahun
+            2019.
+          </li>
+          <li>Dilengkapi contoh sederhana</li>
+          <li>Tersedia kuis di akhir subbab</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HERO READ END-->
+    <section class="forum" id="forum">
+      <h2 class="judul">Forum</h2>
+      <div id="disqus_thread"></div>
+      <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+        (function () {
+          // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://sehaprosy.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </section>
+
+    <!-- Footer start -->
+    <div id="footer"></div>
+    <!-- Footer end -->
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1063 @@
+:root {
+  --primary: #0e5a7a;
+  --bg: #fff;
+  --maintext: #1f2f36;
+  --secondary: #e6f2f8;
+  --accent: #f4a261;
+  --text-dark: #1f2933;
+  --text-muted: #6b7280;
+  --bg-page: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-hover: #eef6fa;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #1f2f36;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background: #fff;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  height: 35px;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #000;
+  display: inline-block;
+  font-size: 0.975rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #000;
+  margin: 0 0.8rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#akun {
+  display: none;
+}
+
+/* HERO READ START */
+.reading-hero {
+  background: linear-gradient(180deg, #0e5a7a, #0b4a64);
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.reading-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.reading-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.reading-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 24px;
+}
+
+.reading-btn {
+  display: inline-block;
+  background: #fbbf24;
+  color: #1f2937;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reading-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reading-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #e5e7eb;
+}
+
+.reading-info {
+  list-style: none;
+  padding: 0;
+}
+
+.reading-info li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* HERO READ END */
+
+/* DAFTAR ISI START */
+.daftar-isi {
+  padding-top: 6rem;
+  padding: 6rem 8%;
+}
+
+.faqs {
+  padding: 100px 8%;
+  background-color: #f7f7f7;
+}
+
+.daftar-isi h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.faqs-header h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.faqs-header p {
+  color: #6b7280;
+  margin-bottom: 60px;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.daftar-isi .judul {
+  padding-bottom: 3rem;
+}
+/* Container */
+.toc {
+  max-width: 720px;
+  margin: auto;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 12px 0;
+  border: 1px solid var(--border);
+}
+
+/* Chapter */
+.chapter {
+  border-top: 1px solid var(--border);
+}
+
+.chapter:first-child {
+  border-top: none;
+}
+
+.chapter-header {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: var(--text-dark);
+}
+
+.faqs .chapter-content .sub {
+  cursor: default;
+}
+
+.faqs .chapter-content .sub:hover {
+  color: var(--text-muted);
+  background: #fff;
+}
+
+.chapter-header:hover {
+  background: var(--bg-hover);
+}
+
+.chapter-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.badge {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.arrow {
+  transition: transform 0.25s ease;
+}
+
+/* Content */
+.chapter-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.chapter.open .chapter-content {
+  max-height: 500px;
+}
+
+.chapter.open .arrow {
+  transform: rotate(90deg);
+}
+
+.sub {
+  display: block;
+  padding: 12px 48px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  background: #ffffff;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sub:hover {
+  background: var(--bg-hover);
+  color: var(--primary);
+}
+
+.sub strong {
+  color: var(--text-light);
+}
+
+/* Sub level 2 */
+.sub-2 {
+  padding-left: 64px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* DAFTAR ISI END */
+
+/* POJOK BACA MATERI START*/
+.materisubbab {
+  max-width: 900px;
+  margin: 7rem auto;
+  background: var(--bg-page);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+/* Materi */
+.materi h2 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.materi p {
+  margin-bottom: 1rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+.materi ol,
+.materi ul {
+  line-height: 2;
+  padding-left: 2rem;
+  list-style-position: outside;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* ARTIKEL MATERI
+/* Styling untuk Figure Container */
+.img-figure {
+  /* Pusat gambar dan keterangan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Batas luar seperti yang terlihat pada gambar */
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 3rem auto; /* Pusat figure di halaman */
+  width: 50%;
+  max-width: fit-content; /* Sesuaikan lebar dengan konten */
+  background-color: #fff; /* Latar belakang figure */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
+  border-radius: 1rem; /* Sudut membulat */
+}
+
+/* Styling untuk Gambar */
+.main-image {
+  /* Atur agar gambar responsif dan tidak melebihi wadah */
+  max-width: 100%;
+  height: auto;
+  /* Tambahkan sedikit margin di bawah gambar */
+  margin-bottom: 10px;
+}
+
+/* Styling untuk Keterangan (Figcaption) */
+.img-caption {
+  /* Sesuaikan gaya font dan ukuran */
+  font-family: Arial, sans-serif;
+  font-size: 0.8em; /* Ukuran font lebih kecil */
+  color: #555; /* Warna teks abu-abu */
+  text-align: center; /* Pusat teks */
+  padding-top: 5px; /* Ruang di atas teks */
+  border-top: 1px solid #eee; /* Garis pemisah tipis */
+  width: 100%;
+}
+
+.quiz {
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  background: #0e5a7a;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.quiz-card {
+  margin-bottom: 1rem;
+}
+
+.quiz-grid {
+  margin-left: 2rem;
+}
+
+.quiz-actions #checkQuiz {
+  display: inline-block;
+  padding: 1rem 1rem;
+  font-size: 1.05rem;
+  color: #fff;
+  background-color: var(--text-muted);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(1, 1, 3, 0.5);
+}
+.question {
+  margin-bottom: 0.7rem;
+  margin-top: 1.5rem;
+}
+.theanswer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  padding-left: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modal-actions button,
+.modal-actions .back {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions button {
+  background: #0e5a7a;
+  color: #fff;
+}
+
+.modal-actions .back {
+  background: #e5e7eb;
+  color: #111827;
+  text-decoration: none;
+}
+
+/*POJOK BACA MATERI END */
+
+/* FORUM START */
+.forum .judul {
+  font-size: 2.2rem;
+  color: var(--maintext);
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+#disqus_thread {
+  padding: 0 5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* FORUM END */
+
+/* QUOTES START */
+.quote-box {
+  background: var(--primary);
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  color: #fff;
+}
+
+.quote-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.quote-box h2::after {
+  content: "";
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background: white;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+  font-size: 1.5rem;
+  min-height: 90px;
+}
+
+.quote-box span {
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+  font-size: 18px;
+}
+
+.quote-box span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.quote-box #tokoh::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.quote-box div {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-box button {
+  background-color: white;
+  color: var(--primary);
+  border-radius: 25px;
+  border: 1px solid var(--primary);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+/* QUOTES END */
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 75rem;
+}
+
+.hero .content h1 {
+  font-size: 3.75em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgb(1, 1, 1, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+  max-width: 50rem;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.05rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* BACKGROUND START */
+.background {
+  padding: 90px 8%;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 70px;
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* KIRI */
+.bg-left h3 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.bg-left p {
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.highlight {
+  color: #0e5a7a;
+  font-weight: 600;
+}
+
+.impact-list {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.impact-list li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+.impact-list li::before {
+  content: "✔";
+  color: #0e5a7a;
+  font-weight: bold;
+}
+
+/* KANAN - CARD */
+.bg-card {
+  background: #f9fafb;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bg-card h3 {
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+}
+
+.bg-card h3 span {
+  color: #0e5a7a;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.info-item .icon {
+  font-size: 22px;
+  color: #0e5a7a;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}
+/* BACKGROUND END */
+
+/* FEATURE START */
+.features {
+  padding: 100px 8%;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.features h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.features p.section-desc {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Grid ===== */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.feature-grid a {
+  color: var(--maintext);
+}
+
+/* ===== Card ===== */
+.feature-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(14, 90, 122, 0.18);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--primary);
+}
+
+.feature-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.feature-card span {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* FEATURE END */
+
+/* TIM KAMI START */
+.team-section {
+  padding: 100px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.team-header h2 {
+  font-size: 2.2rem;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.team-header p {
+  color: #6b7280;
+  margin-bottom: 60px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.team-card .role {
+  display: block;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.team-card .sub-role {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.team-card .quote {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-top: 16px;
+  line-height: 1.6;
+  border-left: 3px solid #fbbf24;
+  padding-left: 12px;
+}
+
+/* kartu tengah lebih menonjol */
+.team-card.highlight {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+/* TIM KAMI END */
+
+/* Footer */
+.footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer h4 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #fbbf24;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid var(--secondary);
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 90%;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    padding: 60px 6%;
+  }
+
+  #hamburger-menu,
+  #user {
+    display: inline-block;
+  }
+
+  #akun {
+    display: block;
+  }
+
+  #user {
+    display: none;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -160%;
+    background-color: #fff;
+    width: 25rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: -20vw;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero {
+    background-position: right 23% bottom 0px;
+  }
+
+  .hero .content {
+    font-size: 80%;
+  }
+
+  .quote-box {
+    width: 80.5%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  .hero {
+    background-position: left 23% bottom 0px;
+  }
+
+  .quote-box {
+    width: 90%;
+  }
+
+  .quote-box blockquote {
+    font-size: 20px;
+  }
+
+  .quote-box h2 {
+    font-size: 22px;
+  }
+
+  .quote-box span {
+    font-size: 15px;
+  }
+}
